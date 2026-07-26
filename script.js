@@ -15,6 +15,19 @@ navLinks.querySelectorAll('a').forEach(link => {
 
 document.getElementById('footerYear').textContent = `© ${new Date().getFullYear()}`;
 
+function setupCarousel() {
+  const track = document.getElementById('stripe-products');
+  const prevBtn = document.querySelector('.carousel-prev');
+  const nextBtn = document.querySelector('.carousel-next');
+  if (!track || !prevBtn || !nextBtn) return;
+
+  const scrollAmount = 350;
+  prevBtn.addEventListener('click', () => track.scrollBy({ left: -scrollAmount, behavior: 'smooth' }));
+  nextBtn.addEventListener('click', () => track.scrollBy({ left: scrollAmount, behavior: 'smooth' }));
+}
+
+setupCarousel();
+
 async function loadStripeLinks() {
   const res = await fetch('data.json');
   if (!res.ok) return;
