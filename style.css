@@ -94,6 +94,8 @@ a { color: inherit; }
 .card-meta { font-size: 0.85rem; color: #6b7180; min-height: 40px; }
 .card-status { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
 .card-link { display: inline-block; margin-top: 10px; font-size: 0.85rem; text-decoration: underline; color: var(--royal); }
+.stripe-widget-slot { margin-top: 12px; }
+.card-live { padding-top: 30px; }
 
 /* Custom section */
 
