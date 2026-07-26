@@ -2,7 +2,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const fs = require('fs');
 
 async function update() {
-    const links = await stripe.paymentLinks.list({ active: true, expand: ['data.line_items.data.price'] });
+    const links = await stripe.paymentLinks.list({ active: true, expand: ['data.line_items.data.price'], limit: 100 });
     const data = {};
 
     for (const link of links.data) {
