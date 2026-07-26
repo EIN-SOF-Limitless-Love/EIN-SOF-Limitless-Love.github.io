@@ -66,8 +66,13 @@ a { color: inherit; }
 .btn:hover { background: var(--royal); }
 .btn-light { background: var(--white); color: var(--ink); border: 1px solid var(--white); }
 .btn-light:hover { background: transparent; color: var(--white); }
+.btn-gold { background: var(--gold); color: var(--white); border: 1px solid var(--gold); }
+.btn-gold:hover { background: #967645; border-color: #967645; }
 
-.hero-art svg { width: 100%; height: auto; }
+.hero-logo-img { width: 100%; max-width: 280px; height: auto; display: block; margin: 0 auto; }
+.hero-logo-text { text-align: center; margin-top: 16px; color: var(--ink); }
+.logo-title { display: block; font-family: var(--font-display); font-size: 2.4rem; line-height: 1.1; }
+.logo-subtitle { display: block; font-family: var(--font-display); font-size: 1.3rem; font-style: italic; margin-top: 4px; color: #454b57; }
 
 /* Thread divider */
 
@@ -79,6 +84,8 @@ a { color: inherit; }
 .story { padding: 70px 32px 40px; max-width: 880px; }
 .story h2 { font-size: 2rem; font-weight: 500; font-style: italic; }
 .story p { color: #454b57; }
+.placeholder-note { font-size: 0.85rem; color: #8a90a0; border-left: 2px solid var(--gold); padding-left: 14px; }
+
 /* Collection */
 
 .collection { padding: 50px 32px 90px; }
