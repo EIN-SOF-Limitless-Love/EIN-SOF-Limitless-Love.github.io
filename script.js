@@ -20,22 +20,30 @@ async function loadStripeLinks() {
   if (!res.ok) return;
   const data = await res.json();
   
-  document.querySelectorAll('.card').forEach(card => {
-    const title = card.querySelector('h3');
-    if (title && data[title.textContent]) {
-      const item = data[title.textContent];
-      const slot = card.querySelector('.stripe-widget-slot');
-      
-      if (slot) {
-        let content = '';
-        if (item.image) {
-          content += `<img src="${item.image}" alt="${title.textContent}" style="width: 140px; height: 140px; object-fit: cover; border-radius: 4px; margin: 0 auto 16px; display: block;">`;
-        }
-        content += `<a href="${item.url}" class="btn">Buy for ${item.price} ${item.currency.toUpperCase()}</a>`;
-        slot.innerHTML = content;
-      }
+  const container = document.getElementById('stripe-products');
+  if (!container) return;
+
+  let html = '';
+  
+  for (const [name, item] of Object.entries(data)) {
+    let imgHtml = '';
+    if (item.image) {
+      imgHtml = `<img src="${item.image}" alt="${name}" style="width: 140px; height: 140px; object-fit: cover; border-radius: 4px; margin: 0 auto 16px; display: block;">`;
     }
-  });
+    
+    html += `
+      <article class="card card-live">
+        <h3>${name}</h3>
+        <p class="card-meta">One of one</p>
+        <div class="stripe-widget-slot">
+          ${imgHtml}
+          <a href="${item.url}" class="btn">Buy for ${item.price} ${item.currency.toUpperCase()}</a>
+        </div>
+      </article>
+    `;
+  }
+  
+  container.innerHTML = html;
 }
 
 loadStripeLinks();
