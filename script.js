@@ -31,7 +31,7 @@ async function loadStripeLinks() {
 
   for (const [name, item] of Object.entries(data)) {
     const imgHtml = item.image ? `<img src="${item.image}" alt="${name}">` : '';
-    const desc = item.description ? truncate(item.description, 90) : 'One of one';
+    const desc = item.description ? truncate(item.description, 150) : 'One of one';
 
     html += `
       <article class="card card-live">
