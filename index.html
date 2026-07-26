@@ -9,7 +9,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
 <body>
 
@@ -84,38 +83,18 @@
     <h2>Each one, only once</h2>
     <p class="section-sub">Once a piece is claimed, it moves to the archive below and its design is retired for good.</p>
 
-    <!-- Each stripe-buy-button needs its own buy-button-id from Stripe (card widget style), with "Limit the number of payments" set to 1 on the underlying link so it deactivates once sold. publishable-key is the same value (pk_...) on every button — never use the secret key (sk_...) here. -->
     <div class="grid">
 
       <article class="card card-live">
+        <h3>Chai</h3>
         <p class="card-meta">Hebrew for "life" — one of one</p>
-        <div class="stripe-widget-slot">
-          <script async
-<script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1TxVQfGq70w3y2spz3sTrm71"
-  publishable-key="pk_live_51TxUSUGq70w3y2spihPP9t5N7Q9gS5REK8YIWBVgfFXfJzsJ3MJ8fUjPX6gNzxr7ezdmASuQ96NbNvEtf4eqOTSd00s0YixNqm"
->
-</stripe-buy-button>
-        </div>
+        <div class="stripe-widget-slot"></div>
       </article>
 
       <article class="card">
+        <h3>Kesef</h3>
         <p class="card-meta">Hebrew for "silver" — one of one</p>
-        <div class="stripe-widget-slot">
-          <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1TxVe8Gq70w3y2spxSsL7o7m"
-  publishable-key="pk_live_51TxUSUGq70w3y2spihPP9t5N7Q9gS5REK8YIWBVgfFXfJzsJ3MJ8fUjPX6gNzxr7ezdmASuQ96NbNvEtf4eqOTSd00s0YixNqm"
->
-</stripe-buy-button>
-        </div>
+        <div class="stripe-widget-slot"></div>
       </article>
 
       <article class="card">
@@ -130,18 +109,14 @@
         <div class="card-art"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="72" fill="none" stroke="#2A4D8F" stroke-width="1"/><path d="M35,100 a65,65 0 1,0 130,0 a65,65 0 1,0 -130,0" fill="none" stroke="#14213D" stroke-width="1.6"/><circle cx="35" cy="100" r="5" fill="#2A4D8F"/><circle cx="75" cy="45" r="3.5" fill="#EDF3FB" stroke="#2A4D8F" stroke-width="1"/><circle cx="145" cy="48" r="6" fill="#B8935A"/><circle cx="165" cy="110" r="4" fill="#14213D"/><circle cx="130" cy="158" r="5" fill="#2A4D8F"/><circle cx="60" cy="150" r="4" fill="#14213D"/></svg></div>
         <h3>Tikvah</h3>
         <p class="card-meta">Hebrew for "hope" — one of one</p>
-        <div class="stripe-widget-slot">
-          <stripe-buy-button buy-button-id="REPLACE_TIKVAH_BUTTON_ID" publishable-key="REPLACE_PUBLISHABLE_KEY"></stripe-buy-button>
-        </div>
+        <div class="stripe-widget-slot"></div>
       </article>
 
       <article class="card">
         <div class="card-art"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="72" fill="none" stroke="#2A4D8F" stroke-width="1"/><path d="M35,100 a65,65 0 1,0 130,0 a65,65 0 1,0 -130,0" fill="none" stroke="#B8935A" stroke-width="1.6"/><circle cx="35" cy="100" r="6" fill="#14213D"/><circle cx="65" cy="48" r="4" fill="#B8935A"/><circle cx="140" cy="40" r="5" fill="#2A4D8F"/><circle cx="163" cy="105" r="3.5" fill="#EDF3FB" stroke="#2A4D8F" stroke-width="1"/><circle cx="135" cy="158" r="4" fill="#14213D"/><circle cx="65" cy="152" r="6" fill="#2A4D8F"/></svg></div>
         <h3>Shalom</h3>
         <p class="card-meta">Hebrew for "peace" — one of one</p>
-        <div class="stripe-widget-slot">
-          <stripe-buy-button buy-button-id="REPLACE_SHALOM_BUTTON_ID" publishable-key="REPLACE_PUBLISHABLE_KEY"></stripe-buy-button>
-        </div>
+        <div class="stripe-widget-slot"></div>
       </article>
 
       <article class="card">
