@@ -28,7 +28,7 @@ async function loadStripeLinks() {
   for (const [name, item] of Object.entries(data)) {
     let imgHtml = '';
     if (item.image) {
-      imgHtml = `<img src="${item.image}" alt="${name}" style="width: 100%; height: 280px; object-fit: cover; border-radius: 4px; margin-bottom: 16px; display: block;">`;
+      imgHtml = `<img src="${item.image}" alt="${name}" style="width: 100%; height: 230px; object-fit: cover; border-radius: 4px; margin-bottom: 16px; display: block;">`;
     }
     
     const desc = item.description ? item.description : 'One of one';
