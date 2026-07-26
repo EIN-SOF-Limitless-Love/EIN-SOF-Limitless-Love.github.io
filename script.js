@@ -37,10 +37,10 @@ async function loadStripeLinks() {
       <article class="card card-live">
         <div>
           <h3>${name}</h3>
-          <p class="card-meta">${desc}</p>
+          ${imgHtml}
+          <p class="card-meta" style="height: 48px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">${desc}</p>
         </div>
         <div class="stripe-widget-slot">
-          ${imgHtml}
           <a href="${item.url}" class="btn btn-gold">Buy for ${item.price} ${item.currency.toUpperCase()}</a>
         </div>
       </article>
