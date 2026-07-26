@@ -15,10 +15,6 @@ navLinks.querySelectorAll('a').forEach(link => {
 
 document.getElementById('footerYear').textContent = `© ${new Date().getFullYear()}`;
 
-function truncate(text, max) {
-  return text.length > max ? text.slice(0, max).trim() + '…' : text;
-}
-
 async function loadStripeLinks() {
   const res = await fetch('data.json');
   if (!res.ok) return;
@@ -31,7 +27,7 @@ async function loadStripeLinks() {
 
   for (const [name, item] of Object.entries(data)) {
     const imgHtml = item.image ? `<img src="${item.image}" alt="${name}">` : '';
-    const desc = item.description ? truncate(item.description, 150) : 'One of one';
+    const desc = item.description ? item.description : 'One of one';
 
     html += `
       <article class="card card-live">
