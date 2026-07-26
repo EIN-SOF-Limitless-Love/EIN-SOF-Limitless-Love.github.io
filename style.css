@@ -38,6 +38,7 @@ a { color: inherit; }
 
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
 
+.logo-image { height: 32px; max-width: 100%; width: auto; display: block; }
 .logo-mark { width: 26px; height: 26px; color: var(--gold); }
 .logo-mark.small { width: 22px; height: 22px; color: var(--gold); }
 
