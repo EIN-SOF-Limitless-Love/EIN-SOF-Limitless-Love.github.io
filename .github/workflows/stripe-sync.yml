@@ -12,10 +12,11 @@ jobs:
       - run: node fetch-stripe.js
         env:
           STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
-      - name: Commit changes
+      - name: Commit and push changes
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
+          git pull origin main --rebase || true
           git add data.json
           git commit -m "Auto-update Stripe links" || exit 0
           git push
