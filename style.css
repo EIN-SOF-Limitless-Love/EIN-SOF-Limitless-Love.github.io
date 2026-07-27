@@ -30,8 +30,6 @@ a { color: inherit; }
 
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
-/* Header */
-
 .site-header { position: sticky; top: 0; background: rgba(255,255,255,0.92); backdrop-filter: blur(6px); z-index: 50; border-bottom: 1px solid #e4e9f2; }
 
 .nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 32px; }
@@ -51,8 +49,6 @@ a { color: inherit; }
 
 .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
 .nav-toggle span { width: 22px; height: 2px; background: var(--ink); display: block; }
-
-/* Hero */
 
 .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; padding: 90px 32px 70px; }
 
@@ -75,19 +71,13 @@ a { color: inherit; }
 .logo-title { display: block; font-family: var(--font-display); font-size: 2.4rem; line-height: 1.1; }
 .logo-subtitle { display: block; font-family: var(--font-display); font-size: 1.3rem; font-style: italic; margin-top: 4px; color: #454b57; }
 
-/* Thread divider */
-
 .thread-divider { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
 .thread-divider svg { width: 100%; height: 40px; display: block; }
-
-/* Story */
 
 .story { padding: 70px 32px 40px; max-width: 880px; }
 .story h2 { font-size: 2rem; font-weight: 500; font-style: italic; }
 .story p { color: #454b57; }
 .placeholder-note { font-size: 0.85rem; color: #8a90a0; border-left: 2px solid var(--gold); padding-left: 14px; }
-
-/* Collection */
 
 .collection { padding: 50px 32px 90px; }
 .collection h2 { font-size: 2.1rem; }
@@ -112,8 +102,6 @@ a { color: inherit; }
 
 .card-section-buy { margin-top: auto; width: 100%; }
 
-/* Custom section */
-
 .custom { background: var(--ink); color: var(--ice); padding: 80px 0; }
 .custom .section-eyebrow { color: var(--gold); }
 .custom h2 { color: var(--white); font-size: 2rem; max-width: 24ch; }
@@ -122,8 +110,6 @@ a { color: inherit; }
 .process { list-style: none; margin: 30px 0; padding: 0; display: grid; gap: 14px; }
 .process li { display: flex; gap: 16px; align-items: baseline; }
 .process span { font-family: var(--font-display); color: var(--gold); font-size: 1.3rem; }
-
-/* Contact */
 
 .contact { padding: 80px 32px 100px; }
 .contact h2 { font-size: 2rem; }
@@ -134,12 +120,8 @@ a { color: inherit; }
 .contact-label { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--royal); }
 .contact-value { font-family: var(--font-display); font-size: 1.15rem; }
 
-/* Footer */
-
 .site-footer { background: var(--white); border-top: 1px solid #e4e9f2; padding: 34px 0; }
 .footer-inner { display: flex; align-items: center; gap: 14px; justify-content: center; flex-wrap: wrap; color: #6b7180; font-size: 0.85rem; }
-
-/* Responsive */
 
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; padding-top: 60px; }
@@ -154,10 +136,11 @@ a { color: inherit; }
   .nav-links.open { display: flex; }
   .nav-links a { display: block; padding: 14px 32px; border-top: 1px solid #f0f3f9; }
   
-  .carousel { gap: 0; }
+  .collection { padding-left: 16px; padding-right: 16px; }
+  .carousel { gap: 0; margin-left: -16px; margin-right: -16px; }
   .carousel-btn { display: none; } 
-  .carousel-track { padding: 0 10px 16px; }
-  .carousel-track .card { flex: 0 0 85%; max-width: 280px; margin: 0 auto; }
+  .carousel-track { padding: 0 16px 16px 16px; gap: 16px; }
+  .carousel-track .card { flex: 0 0 85%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
